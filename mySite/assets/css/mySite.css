@@ -68,18 +68,18 @@ body{
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 #resume-tile {
-  background: url('../pics/opt-resume2.jpg') no-repeat;
+  background: url('../pics/Opt-resume2.jpg') no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
 #project-tile {
-  background: url('../pics/opt-project2.jpg') no-repeat;
+  background: url('../pics/Opt-project2.jpg') no-repeat;
   background-position: bottom;
   background-size: 100% 100%;
 }
 
 #weird-tile {
-  background: url('../pics/opt-weird2.jpg') no-repeat;
+  background: url('../pics/Opt-weird2.jpg') no-repeat;
   background-position: bottom;
   background-size: 100% 100%;
 }
