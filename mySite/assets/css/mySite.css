@@ -1,18 +1,3 @@
-/*body{
-	background: url("https://source.unsplash.com/LZfpD7ckSOE");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	font-family:  Lato;
-	color: white;
-	overflow: auto;
-	background-clip: padding-box;
-	}*/
-
-/*
-html{
-	height: 100%
-}*/
 
 .bg-image{
 	background: url("https://source.unsplash.com/LZfpD7ckSOE");
@@ -32,17 +17,48 @@ html{
 	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 				 0px 8px 13px rgba(0,0,0,0.1),
 				 0px 18px 23px rgba(0,0,0, 0.1);	
-	/*font-family:  Lato;
-	color: white;*/
 }
 
- #content1{
- 	padding-top: 25%;
+ .content1{
 	text-align: center;
 	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 				 0px 8px 13px rgba(0,0,0,0.1),
 				 0px 18px 23px rgba(0,0,0, 0.1);
  }
+.container{
+	width: 100%;
+}
+
+.main-boxes{
+	padding: 5%;
+	border: 1px solid black;
+	width: 100%;
+	height: 25%;
+}
+
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #388EAB;
+  border-top: 0;
+  color: white;
+}
+
+#contact{
+	text-align: center;
+	font: 1.5em; 
+}
+
+#footer-list{
+	display: inline;
+	list-style: none;
+}
 
 h1{
 	font-weight: 700;
@@ -54,3 +70,4 @@ hr{
 	border-top: 1px solid #f8f8f8;
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
+
