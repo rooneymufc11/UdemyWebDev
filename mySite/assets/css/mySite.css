@@ -19,7 +19,7 @@ body{
 }
 
 .bg-image{
-	background: url('../pics/opt-george-doumani-46147.jpg');
+	background: url('../pics/opt-bg1.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -68,18 +68,18 @@ body{
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 #resume-tile {
-  background: url('../pics/resume2.jpg') no-repeat;
+  background: url('../pics/opt-resume2.jpg') no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
 #project-tile {
-  background: url('../pics/project2.jpg') no-repeat;
+  background: url('../pics/opt-project2.jpg') no-repeat;
   background-position: bottom;
   background-size: 100% 100%;
 }
 
 #weird-tile {
-  background: url('../pics/weird2.jpg') no-repeat;
+  background: url('../pics/opt-weird2.jpg') no-repeat;
   background-position: bottom;
   background-size: 100% 100%;
 }
