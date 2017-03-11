@@ -5,6 +5,7 @@ body{
 
 #header-nav {
   background-color: #ddd;
+  width: 50%;
 }
 
 .navbar-default .navbar-nav>li>a {
