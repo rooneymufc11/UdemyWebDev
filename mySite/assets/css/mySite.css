@@ -123,23 +123,13 @@ h1{
 }
 
 hr{
-	width: 50%;
+	width: 75%;
 	border-top: 1px solid #f8f8f8;
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-/**media queries**/
-
-/*Large devices*/
-/*@media (min-width: 1200px) {
-  .navbar-fixed-top{
-		width: 100%;
-	}
-}*/
-
-/*@media (max-width: 767px) {
-  .navbar-fixed-top{
-		width: 100%;
-	}
-
-}*/
+#footer-hr{
+	width: 75%;
+	border-top: 1px solid #388EBF;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
