@@ -1,5 +1,9 @@
-.thumbnail img{
-  margin-top: 5%;
+body > .container {
+  padding-top: 60px;
+}
+
+img{
+  margin-top: 7%;
 	width: 30%;
 	float: left;
 	margin-left: 1.66%;
