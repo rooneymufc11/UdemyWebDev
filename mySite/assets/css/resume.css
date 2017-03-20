@@ -26,36 +26,6 @@
 }
 
 
-.container{
-  width: 100%;
-}
-
-#footer-list{
-  display: inline;
-  list-style: none;
-}
-
-#footer-hr{
-  width: 75%;
-  border-top: 1px solid #388EBF;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-.panel-footer {
-  margin-top: 30px;
-  padding-top: 35px;
-  padding-bottom: 30px;
-  background-color: #ddd;
-  border-top: 0;
-  color: #388EBF;
-  width: 100%;
-}
-
-#contact{
-  text-align: center;
-  font: 1.5em; 
-}
-
 body {
   font-family: 'Lato', sans-serif;
   color: #545E6C;
@@ -65,6 +35,7 @@ body {
   padding: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 h1,
 h2,
@@ -296,7 +267,39 @@ p {
   height: 12px;
   background: #7bc2d3;
 }
-.footer {
+
+.container{
+  width: 100%;
+}
+
+#footer-list{
+  display: inline;
+  list-style: none;
+}
+
+#footer-hr{
+  width: 75%;
+  border-top: 1px solid #388EBF;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #ddd;
+  border-top: 0;
+  color: #388EBF;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#contact{
+  text-align: center;
+  font: 1.5em; 
+}
+
+/*.footer {
   padding: 30px;
   padding-top: 60px;
 }
@@ -307,7 +310,8 @@ p {
 }
 .footer .fa-heart {
   color: #fb866a;
-}
+*/
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .sidebar-wrapper {
@@ -345,3 +349,5 @@ p {
 }
 /* Large devices (large desktops, 1200px and up) */
 /* Ex-Large devices (large desktops, 1200px and up) */
+
+

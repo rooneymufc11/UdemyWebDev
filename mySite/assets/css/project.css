@@ -1,16 +1,18 @@
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
 body > .container {
   padding-top: 60px;
 }
 
-img{
-  margin-top: 7%;
-  width: 30%;
-  float: left;
-  margin-left: 1.66%;
-}
-
 body{
   background-color: #388EBF;
+  font-family: Lato; 
 }
 
 #header-nav {
@@ -31,13 +33,84 @@ body{
 .container{
   width: 100%;
 }
+
+#ogap-tile, #color-tile, #patatap-tile {
+  height: 250px;
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #388EAB;
+  overflow: hidden;
+}
+
+#ogap-tile:hover, #color-tile:hover, #patatap-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #388EBF;
+}
+
+#ogap-tile:hover .overlay, #color-tile:hover .overlay, #patatap-tile:hover .overlay{
+  opacity: 0.95;
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+}
+
+#ogap-tile {
+  background: url('../pics/ogap.png') no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#color-tile {
+  background: url('../pics/colorGuess.png') no-repeat;
+  background-position: bottom;
+  background-size: 100% 100%;
+}
+
+#patatap-tile {
+  background: url('../pics/patatap.png') no-repeat;
+  background-position: bottom;
+  background-size: 100% 100%;
+}
+
+.tiles{
+  margin-top: 15px;
+}
+
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
 .panel-footer {
+  position: absolute;
+  width: 100%;
+  /*bottom: 0;*/
+  /*width: 100%;*/
+/*  height: 100%;*/
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 30px;
   background-color: #ddd;
   border-top: 0;
   color: #388EBF;
+
 }
 
 #contact{
@@ -48,4 +121,10 @@ body{
 #footer-list{
   display: inline;
   list-style: none;
+}
+
+#footer-hr{
+  width: 75%;
+  border-top: 1px solid #388EBF;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
