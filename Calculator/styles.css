@@ -1,0 +1,54 @@
+body{
+	overflow: hidden;
+	box-sizing: border-box;
+	font-family: "Palatino Linotype";
+	font-weight: bold;
+}
+
+.calculator{
+	width: 350px;
+	height: 400px;
+	background-color: black;
+    margin: 10% auto;
+    overflow: hidden;
+    
+    
+}
+
+.screen{
+	width: 90%;
+	height: 35%;
+	margin: 5% auto;
+	background-color: #333333;
+	border: 1px solid black;
+	font-size: 50px;
+	color: white;
+	position: relative;
+}
+
+.screen span{
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+}
+
+.keys{
+	text-align: center;
+	width: 90%;
+	margin: auto;
+	color: black;
+	font-size: 20px;
+	
+}
+
+.keys span{
+	float: left;
+	width: 25%;
+	padding-bottom: 4%;
+	padding-top: 4%;
+	background-color:#a3a3a3;
+}
+
+span.operators{
+	background-color:pink;
+}
