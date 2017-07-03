@@ -40,6 +40,7 @@ for(var i=0; i<num.length; i++){
 for(var i=0; i<operators.length; i++){
 	operators[i].addEventListener("click", function(){
 		sign = true;
+		dflag=false;
 		 if(this.textContent == '÷'){
 		 	// if(opcount[length] == '*' || opcount[length] == '/'){
 				if(current[current.length-1] == '*' || current[current.length-1] == '/'){
