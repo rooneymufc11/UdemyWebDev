@@ -11,11 +11,9 @@ body{
 	background-color: black;
     margin: 10% auto;
     overflow: hidden;
-    
-    
 }
 
-.screen{
+#screen{
 	width: 90%;
 	height: 35%;
 	margin: 5% auto;
@@ -26,7 +24,7 @@ body{
 	position: relative;
 }
 
-.screen span{
+#screen span{
 	position: absolute;
 	bottom: 0;
 	right: 10px;
