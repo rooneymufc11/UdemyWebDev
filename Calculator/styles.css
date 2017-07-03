@@ -14,7 +14,7 @@ body{
 }
 
 #screen{
-	width: 90%;
+	width: 89%;
 	height: 35%;
 	margin: 5% auto;
 	background-color: #333333;
@@ -41,12 +41,13 @@ body{
 
 .keys span{
 	float: left;
-	width: 25%;
-	padding-bottom: 4%;
-	padding-top: 4%;
+	width: 24.3%;
+	padding-bottom: 3.5%;
+	padding-top: 3.5%;
 	background-color:#a3a3a3;
+	border: 1px solid black;
 }
 
 span.operators{
-	background-color:pink;
+	background-color: pink;
 }
