@@ -13,18 +13,18 @@ body{
     overflow: hidden;
 }
 
-#screen{
+#display{
 	width: 89%;
 	height: 35%;
 	margin: 5% auto;
-	background-color: #333333;
+	background-color: #ddd;
 	border: 1px solid black;
 	font-size: 50px;
-	color: white;
+	color: #545e6c;
 	position: relative;
 }
 
-#screen span{
+#screen{
 	position: absolute;
 	bottom: 0;
 	right: 10px;
@@ -44,12 +44,12 @@ body{
 	width: 24.3%;
 	padding-bottom: 3.5%;
 	padding-top: 3.5%;
-	background-color:#a3a3a3;
+	background-color: #1a454f;
 	border: 1px solid black;
 }
 
 span.operators{
-	background-color: pink;
+	background-color: #388ebf;
 }
 
 .pressednum{

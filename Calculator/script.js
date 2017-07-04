@@ -3,6 +3,8 @@ var operators = document.querySelectorAll(".operators");
 var decimal = document.querySelector("#decimal");
 var equals = document.querySelector("#equal");
 var screen = document.querySelector("#screen");
+screen.innerHTML = 0;
+var keys = document.querySelectorAll(".keys");
 var result;
 var ipCheck;
 var prev;
@@ -15,10 +17,12 @@ var eqflag = false;
 
 
 
+
 decimal.addEventListener("click", function(){
 	if(sign){
 		screen.innerHTML = this.textContent;
 		current.push(this.textContent);
+		// number.push(this.textContent);
 		sign = false;
 		dflag = true;
 	}
@@ -26,7 +30,13 @@ decimal.addEventListener("click", function(){
 	else if(dflag == false){
 		screen.innerHTML += this.textContent;
 		current.push(this.textContent);
+		// number.push(this.textContent);
 		dflag = true;
+	}
+
+	else if(current.length==0){
+		screen.innerHTML = this.textContent;
+		console.log("i am here woohoo");
 	}
 
 });
@@ -45,16 +55,22 @@ for(var i=0; i<num.length; i++){
 		else if(current[current.length-1] == '-'&&current.length==1){
 			screen.innerHTML = current[current.length-1] + this.textContent;
 		}
-
-		else{
-			screen.innerHTML += this.textContent;
+		
+		else if(current.length==0){
+			screen.innerHTML = this.textContent;
+				console.log("i am in num woohoo");
 		}
-	current.push(this.textContent);
-	number.push(this.textContent);
-	ipCheck = number.join('');
-	if(checkBits(ipCheck)){
-		screen.innerHTML = "Error";
-	}
+		else{ 	number.push(this.textContent);
+				ipCheck = number.join('');
+				if(checkBits(ipCheck)){
+				console.log("whaaaaaaat");
+				screen.innerHTML;
+				}
+				else screen.innerHTML += this.textContent;
+				number.pop(this.textContent);
+		}
+		current.push(this.textContent);
+		number.push(this.textContent);
 });
 }
 
@@ -203,11 +219,14 @@ function calculate(current){
 }
 
 function checkBits(x){
-	if((Math.max(Math.floor(Math.log10(Math.abs(x))), 0) + 1)>10){
-			result = undefined;
-			return true;
-		}
-	else return false;
+	// if((Math.max(Math.floor(Math.log10(Math.abs(x))), 0) + 1)>10){
+	// 		result = undefined;
+	// 		return true;
+	// 	}
+	if(x.toString().length>10){
+		console.log("i am in checkBits and over 10");
+		return true;
+	}
 }
 
 function firstOp(current,operator,op){
