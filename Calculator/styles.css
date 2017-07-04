@@ -3,6 +3,11 @@ body{
 	box-sizing: border-box;
 	font-family: "Palatino Linotype";
 	font-weight: bold;
+	user-select: none;
+	background: #16222A;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .calculator{
@@ -17,7 +22,7 @@ body{
 	width: 89%;
 	height: 35%;
 	margin: 5% auto;
-	background-color: #ddd;
+	background-color: #ccc;
 	border: 1px solid black;
 	font-size: 50px;
 	color: #545e6c;
@@ -36,6 +41,7 @@ body{
 	margin: auto;
 	color: black;
 	font-size: 20px;
+	cursor: pointer;
 	
 }
 
@@ -44,18 +50,26 @@ body{
 	width: 24.3%;
 	padding-bottom: 3.5%;
 	padding-top: 3.5%;
-	background-color: #1a454f;
+	background-color: #358daa;
 	border: 1px solid black;
 }
 
+.keys span:hover{
+	background-color: #2a6d7c;
+}
+
+.keys span:active{
+	background-color: #1a454f;
+}
+
 span.operators{
-	background-color: #388ebf;
+	background-color: #81b7c4;
 }
 
-.pressednum{
-	background-color: #535353;
+span.operators:hover{
+	background-color: #62a2af;
 }
 
-.pressedop{
-	background-color: #DB7093;
+span.operators:active{
+	background-color: #3d7e8c;
 }

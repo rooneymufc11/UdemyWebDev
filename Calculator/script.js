@@ -4,7 +4,6 @@ var decimal = document.querySelector("#decimal");
 var equals = document.querySelector("#equal");
 var screen = document.querySelector("#screen");
 screen.innerHTML = 0;
-var keys = document.querySelectorAll(".keys");
 var result;
 var ipCheck;
 var prev;
@@ -22,7 +21,6 @@ decimal.addEventListener("click", function(){
 	if(sign){
 		screen.innerHTML = this.textContent;
 		current.push(this.textContent);
-		// number.push(this.textContent);
 		sign = false;
 		dflag = true;
 	}
@@ -30,19 +28,20 @@ decimal.addEventListener("click", function(){
 	else if(dflag == false){
 		screen.innerHTML += this.textContent;
 		current.push(this.textContent);
-		// number.push(this.textContent);
 		dflag = true;
 	}
 
 	else if(current.length==0){
 		screen.innerHTML = this.textContent;
-		console.log("i am here woohoo");
 	}
 
 });
 
 for(var i=0; i<num.length; i++){
 		num[i].addEventListener("click", function(){
+		current.push(this.textContent);
+		number.push(this.textContent);
+
 		if(eqflag){
 		eqflag=false;
 		result=undefined;
@@ -56,28 +55,36 @@ for(var i=0; i<num.length; i++){
 			screen.innerHTML = current[current.length-1] + this.textContent;
 		}
 		
-		else if(current.length==0){
+		else if(current.length==1){
 			screen.innerHTML = this.textContent;
-				console.log("i am in num woohoo");
 		}
-		else{ 	number.push(this.textContent);
+		
+		else{ 
 				ipCheck = number.join('');
 				if(checkBits(ipCheck)){
-				console.log("whaaaaaaat");
 				screen.innerHTML;
+				current.pop();
+				number.pop();
 				}
-				else screen.innerHTML += this.textContent;
-				number.pop(this.textContent);
+				else {
+					screen.innerHTML += this.textContent;
+					
+				}
+				
 		}
-		current.push(this.textContent);
-		number.push(this.textContent);
+	
 });
 }
+
 
 
 for(var i=0; i<operators.length; i++){
 	operators[i].addEventListener("click", function(){
 		number = [];
+
+		if(current[current.length-1]==op[op.length-1]){
+			screen.innerHTML;
+		}
 		if(eqflag){
 			current.push(result);
 			eqflag = false;
@@ -88,31 +95,13 @@ for(var i=0; i<operators.length; i++){
 		 if(this.textContent == '÷'){
 		 		result = firstOp(current,'/',op);
 		 	}
-			// 	if(op[op.length-1] == '*' || op[op.length-1] == '/'){
-			// 		// result = eval(current.join(''));
-			// 		result = calculate(current);
-			// 		// screen.innerHTML = result;
-			// 	 //screen.innerHTML = eval(current.join(''));
-			// 	 }
-			// 	 else if(op.length==0){
-			// 	 	console.log("i am empty");
-			// 	 }
-			// current.push('/')
-			// op.push('/');
+			
 		
 		
 		else if(this.textContent == 'x'){
 				result = firstOp(current,'*',op);
 			}
-			// 	if(op[op.length-1] == '*' || op[op.length-1] == '/'){
-			// 	// screen.innerHTML = eval(current.join(''));
-			// 	// result = eval(current.join(''));
-			// 	 result = calculate(current);
-			// 	 // screen.innerHTML = result;
-				 
-			// }
-			// current.push('*');
-			// op.push('*');
+	
 
 		else if(this.textContent == '+'){
 			result = firstOp(current,'+',op);
@@ -128,12 +117,7 @@ for(var i=0; i<operators.length; i++){
 				result = firstOp(current,'-',op);
 				}
 			}
-			// 			result = calculate(current);
-			// 	// screen.innerHTML = result;
-			//  // screen.innerHTML = eval(current.join(''));
-			//  console.log("inside of + - "+current);
-			// current.push(this.textContent);
-			// op.push(this.textContent);
+		
 					
 				
 				
@@ -154,50 +138,17 @@ equals.addEventListener("click", function(){
 	
 	else{
 	eqflag = true;
-	// sign = true;
+	
 	dflag=false;
-	// console.log(current.join(''));
-	// result=eval(current.join(''));
-	// console.log("outside "+ result);
+
 	result = calculate(current);
 	current = [];
-
-		// if((Math.max(Math.floor(Math.log10(Math.abs(result))), 0) + 1)>10){
-		// screen.innerHTML = 'Error';
-		// current = [];
-		// result = undefined;
-		// // eqflag = false;
-		// }
-
-		// else if(result.toString().indexOf('.')!=-1){
-		// 	screen.innerHTML = result.toPrecision(10);
-		// 	result = result.toPrecision(10);
-		// 	console.log(result);
-		// 	current = [];
-		// 	console.log("inside decimal" + result);
-		// }
-
-
-		// else {
-		// 	screen.innerHTML = result;
-		// 	current = [];
-		// 	console.log("ekdum normal" + result);
-		// 	}
 	
 	}
 });
 
 function calculate(current){
-	// eqflag = true;
-	// console.log(eqflag);
-	// // sign = true;
-	// dflag=false;
 	result=eval(current.join(''));
-	// if((Math.max(Math.floor(Math.log10(Math.abs(result))), 0) + 1)>10){
-	// 		screen.innerHTML = 'Error';
-	// 		result = undefined;
-	// 		return result;
-	// 	}
 
 		if(checkBits(result)){
 			screen.innerHTML = "Error";
@@ -205,8 +156,7 @@ function calculate(current){
 		}
 
 		else if(result.toString().indexOf('.')!=-1){
-			// screen.innerHTML = result.toPrecision(10);
-			screen.innerHTML = +(+result.toPrecision(10)).toFixed(10);
+			screen.innerHTML = +(+result.toPrecision(10)).toFixed(10);  
 			result = result.toPrecision(10);
 			return result;
 		}
@@ -219,24 +169,21 @@ function calculate(current){
 }
 
 function checkBits(x){
-	if((Math.max(Math.floor(Math.log10(Math.abs(x))), 0) + 1)>10){
+
+	if((Math.max(Math.floor(Math.log10(Math.abs(x))), 0) + 1)>10 || (Number(x)<1 && x.length>11)){
 			result = undefined;
 			return true;
 		}
-	// if(x.toString().length>10){
-	// 	console.log("i am in checkBits and over 10");
-	// 	return true;
-	// }
 }
 
 function firstOp(current,operator,op){
 		prev = op[op.length-1];
-		if(current.length==0){
-			
+		if(current.length==0 || current[current.length-1]==op[op.length-1]){
 			op = [];
 			current = [];
 			return undefined;
 		}
+
 
 		else if(prev == '*' || prev == '/'|| op.length==0 || (prev=='+' && operator=='+') || (prev=='-' && operator=='-')||(prev=='+' && operator=='-')||(prev=='-' && operator=='+')){
 			
@@ -247,7 +194,6 @@ function firstOp(current,operator,op){
 		}
 
 		else if(prev == '+'|| prev == '-'){
-			console.log("third + and -");
 			current.push(operator);
 			op.push(operator);
 			return result;
