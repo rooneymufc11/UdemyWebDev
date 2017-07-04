@@ -219,14 +219,14 @@ function calculate(current){
 }
 
 function checkBits(x){
-	// if((Math.max(Math.floor(Math.log10(Math.abs(x))), 0) + 1)>10){
-	// 		result = undefined;
-	// 		return true;
-	// 	}
-	if(x.toString().length>10){
-		console.log("i am in checkBits and over 10");
-		return true;
-	}
+	if((Math.max(Math.floor(Math.log10(Math.abs(x))), 0) + 1)>10){
+			result = undefined;
+			return true;
+		}
+	// if(x.toString().length>10){
+	// 	console.log("i am in checkBits and over 10");
+	// 	return true;
+	// }
 }
 
 function firstOp(current,operator,op){
