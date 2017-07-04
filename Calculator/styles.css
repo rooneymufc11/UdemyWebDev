@@ -51,3 +51,11 @@ body{
 span.operators{
 	background-color: pink;
 }
+
+.pressednum{
+	background-color: #535353;
+}
+
+.pressedop{
+	background-color: #DB7093;
+}
