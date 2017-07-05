@@ -68,7 +68,7 @@ for(var i=0; i<num.length; i++){
 // to check if the incoming digit is the 11th digit. Only 10 digits are taken as the input
 		else{ 
 				ipCheck = number.join('');
-				if(checkBits(ipCheck)){
+				if(checkBitsip(ipCheck)){
 				screen.innerHTML;
 				current.pop();  	//pop the digits if the number of inputs exceed 10
 				number.pop();		//pop the digits if the number of inputs exceed 10
@@ -81,8 +81,6 @@ for(var i=0; i<num.length; i++){
 	
 	});
 }
-
-
 
 for(var i=0; i<operators.length; i++){
 // Event listener for the operator keys
@@ -160,15 +158,14 @@ function constrain(current){
 	result=eval(current.join(''));
 
 //check if the result digit count is >10	
-	if(checkBits(result)){
+	if(checkBitsop(result)){
 		screen.innerHTML = "Error";
 		return result;
 	}
 
-//to round off the decimals so the result digit count is not >10 
 	else if(result.toString().indexOf('.')!=-1){
-		screen.innerHTML = +(+result.toPrecision(10)).toFixed(10); 
-		result = result.toPrecision(10);
+		screen.innerHTML = (result.toString()).substring(0,11);
+		result = (result.toString()).substring(0,11);
 		return result;
 	}
 
@@ -180,13 +177,16 @@ function constrain(current){
 }
 
 //to check if the incoming digit count or the result digit count is above 10
-function checkBits(x){
-	//Math function to check the digit count for numbers >=1 || Number(x) to check the digit count for numbers <1
-	if((Math.max(Math.floor(Math.log10(Math.abs(x))), 1) + 1)>10|| Number(x)<1&&(x.length)-1>9){
-			result = undefined;
-			return true;
-		}
+function checkBitsip(ipCheck){ //input
+	return (ipCheck.length)>10
+}
+
+function checkBitsop(result){
+	if(result.toString().indexOf('.')==-1){
+		return (result.toString().length>10);
 	}
+	
+}
 
 //for calculating the result
 function calculate(current,operator,op){
