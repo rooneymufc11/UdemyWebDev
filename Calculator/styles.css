@@ -60,6 +60,7 @@ body{
 
 .keys span:active{
 	background-color: #1a454f;
+	
 }
 
 span.operators{
@@ -72,4 +73,5 @@ span.operators:hover{
 
 span.operators:active{
 	background-color: #3d7e8c;
+
 }
